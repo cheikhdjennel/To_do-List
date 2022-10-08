@@ -3,7 +3,7 @@ A todo list iOS app developed with swift5 and coredata to persist data, this app
 The app is simple, intuitive, and easy to use and update tasks informations.
 Design pattern used : MVC and not MVVM since the app is not complicated.
 
-App functionality :
+App functionalities :
 - add a category 
 - rename or delete a category 
 - add a task inside a category with specifying the name, duration and the task priority.
