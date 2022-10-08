@@ -5,11 +5,11 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 
 <h1> App functionalities : </h1>
 <ul>
-<li> Add a category  <\li>
-<li> Rename or delete a category .<\li>
-<li> Add a task inside a category with specifying the name, duration and the task priority.<\li>
-<li> Rename or delete of a task .<\li>
-<li> Search for a task by typing a string that is contained in the task name.<\li>
+<li> Add a category.
+<li> Rename or delete a category.
+<li> Add a task inside a category with specifying the name, duration and the task priority.
+<li> Rename or delete of a task.
+<li> Search for a task by typing a string that is contained in the task name.
 </ul>
   
 <h1> The app UI </h1>
