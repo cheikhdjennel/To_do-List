@@ -4,12 +4,14 @@ The app is simple, intuitive, and easy to use and update tasks informations.
 Design pattern used : MVC and not MVVM since the app is not complicated.
 
 <h1> App functionalities : </h1>
-- add a category 
-- rename or delete a category .\n
-- add a task inside a category with specifying the name, duration and the task priority.
-- rename or delete of a task .
-- search for a task by typing a string that is contained in the task name.
-
+<ul>
+<li> Add a category  <\li>
+<li> Rename or delete a category .<\li>
+<li> Add a task inside a category with specifying the name, duration and the task priority.<\li>
+<li> Rename or delete of a task .<\li>
+<li> Search for a task by typing a string that is contained in the task name.<\li>
+</ul>
+  
 <h1> The app UI </h1>
 <h2>1)-Adding a task's category : </h2>
 By setting a name for the new category, the category added then gonna be stored in SQlite database using Coredata
