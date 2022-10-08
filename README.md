@@ -12,7 +12,9 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 <li> Search for a task by typing a string that is contained in the task name.
 </ul>
   
+  
 <h1> The app UI </h1>
+
 <h2>1)-Adding a task's category : </h2>
 By setting a name for the new category, the category added then gonna be stored in SQlite database using Coredata
 
@@ -23,8 +25,10 @@ By setting a name for the new category, the category added then gonna be stored 
 
 <h3> Renaming or deleting a category by swiping the cell : </h3>
 
+<p align="center">
+  <img width="350" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
+</p>
 
-<img align="middle" width="350" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
 
 
 <h2>2)-Adding a task to a category: </h2>
@@ -36,12 +40,18 @@ By setting a name for the new category, the category added then gonna be stored 
 
 <h3> Renaming or deleting a Task by swiping the cell : </h3>
 
+<p align="center">
+  <img width="344" alt="Capture d’écran 2022-10-08 à 4 05 44 PM" src="https://user-images.githubusercontent.com/51541884/194715988-a05c8655-7e9a-4da0-b153-3531c37679b6.png">
+</p>
 
-<img width="344" alt="Capture d’écran 2022-10-08 à 4 05 44 PM" src="https://user-images.githubusercontent.com/51541884/194715988-a05c8655-7e9a-4da0-b153-3531c37679b6.png">
+
 
 
 <h2>3)-Searching for a task : </h2>
 
 
-<img width="344" alt="Capture d’écran 2022-10-08 à 4 48 09 PM" src="https://user-images.githubusercontent.com/51541884/194716023-b086386d-70af-458d-9ec3-d61d8f007a7c.png">
+<p align="center">
+  <img width="344" alt="Capture d’écran 2022-10-08 à 4 48 09 PM" src="https://user-images.githubusercontent.com/51541884/194716023-b086386d-70af-458d-9ec3-d61d8f007a7c.png">
+</p>
+
 
