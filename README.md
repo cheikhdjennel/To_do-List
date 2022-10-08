@@ -6,15 +6,18 @@ The app is simple, intuitive, and easy to use and update tasks informations.
 <h2>1)-Adding a task's category : </h2>
 By setting a name for the new category, the category added then gonna be stored in SQlite database using Coredata
 
-![Simulator Screen Shot - iPhone 12 Pro - 2022-10-08 at 15 00 04](https://user-images.githubusercontent.com/51541884/194711345-e0c846c3-9e89-4b64-97da-707851bc3437.png)
+<img width="347" alt="Capture d’écran 2022-10-08 à 3 56 47 PM" src="https://user-images.githubusercontent.com/51541884/194713796-9fa85f8f-9b36-4294-bf4c-13344ef7bb24.png">
+
 
 <h3> Category list : </h3>
 
-![Simulator Screen Shot - iPhone 12 Pro - 2022-10-08 at 15 03 54](https://user-images.githubusercontent.com/51541884/194711484-cc20d4be-955f-4a7b-b816-b6cdf56841ab.png)
+<img width="352" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png">
+
 
 <h3> Renaming or deleting a category by swiping the cell : </h3>
 
-![3](https://user-images.githubusercontent.com/51541884/142218768-2b03a037-0602-4159-9437-fce7fb5704d9.jpeg)
+<img width="350" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
+
 
 <h2>2)-Adding a task to a category: </h2>
 
