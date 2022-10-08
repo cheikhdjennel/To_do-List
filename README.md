@@ -12,6 +12,9 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 <li> Search for a task by typing a string that is contained in the task name.
 </ul>
   
+<h2> Pods used : </h2>
+<li> SwipeCellKit : to be able to swipe cells with a nice animation.
+<li> ChameleonFramework: A color iOS framework.
   
 <h1> The app UI </h1>
 
