@@ -26,7 +26,7 @@ By setting a name for the new category, the category added then gonna be stored 
 
 <h3> Renaming or deleting a category by swiping the cell : </h3>
 
-
+</br>
 <p align="center">
   <img width="350" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
 </p>
