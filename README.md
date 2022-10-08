@@ -21,7 +21,7 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 
 <br/>
 
-<p align="middle">
+<p align="middle" hspace="20">
 <img width="347" alt="Capture d’écran 2022-10-08 à 3 56 47 PM" src="https://user-images.githubusercontent.com/51541884/194713796-9fa85f8f-9b36-4294-bf4c-13344ef7bb24.png">     
 <img width="352" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png">
 </p>
@@ -38,7 +38,7 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 <h2>2)-Adding a task to a category: </h2>
 
 <br/>
-<p float="left"  align="middle">
+<p float="left"  align="middle" hspace="20">
 <img width="351" alt="Capture d’écran 2022-10-08 à 4 04 37 PM" src="https://user-images.githubusercontent.com/51541884/194714193-5e258809-635a-4ede-8c5e-f900bd8424dc.png">   
 <img width="351" alt="Capture d’écran 2022-10-08 à 4 05 23 PM" src="https://user-images.githubusercontent.com/51541884/194715933-be594c06-fc56-406e-b395-43d658bc8b8f.png">
 </p>
