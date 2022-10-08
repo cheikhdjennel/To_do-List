@@ -1,6 +1,8 @@
 # To_do-List
 A todo list iOS app developed with swift5 and coredata to persist data, this app help people organise their tasks on categories.
 The app is simple, intuitive, and easy to use and update tasks informations.
+Design pattern used : MVC and not MVVM since the app is not complicated.
+
 
 <h1> The app UI </h1>
 <h2>1)-Adding a task's category : </h2>
@@ -8,11 +10,7 @@ By setting a name for the new category, the category added then gonna be stored 
 
 <img width="347" alt="Capture d’écran 2022-10-08 à 3 56 47 PM" src="https://user-images.githubusercontent.com/51541884/194713796-9fa85f8f-9b36-4294-bf4c-13344ef7bb24.png">
 
-
-<h3> Category list : </h3>
-
 <img width="352" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png">
-
 
 <h3> Renaming or deleting a category by swiping the cell : </h3>
 
@@ -21,11 +19,8 @@ By setting a name for the new category, the category added then gonna be stored 
 
 <h2>2)-Adding a task to a category: </h2>
 
-![4](https://user-images.githubusercontent.com/51541884/142218819-cf171b46-6942-4338-88fa-d96c0534939c.jpeg)
+<img width="351" alt="Capture d’écran 2022-10-08 à 4 04 37 PM" src="https://user-images.githubusercontent.com/51541884/194714193-5e258809-635a-4ede-8c5e-f900bd8424dc.png">
 
-![5](https://user-images.githubusercontent.com/51541884/142218868-52918edd-c766-4bc5-bac6-88ff74233e32.jpeg)
-
-![6](https://user-images.githubusercontent.com/51541884/142218888-f74d3f79-171c-44f5-b830-00b5e4d91052.jpeg)
 
 <h2>3)-Searching for a task : </h2>
 
