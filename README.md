@@ -27,7 +27,7 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 </p>
 
 <h3> Renaming or deleting a category by swiping the cell : </h3>
-<br />
+<br/>
 
 <p align="center">
   <img width="350" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
@@ -37,7 +37,7 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 
 <h2>2)-Adding a task to a category: </h2>
 
-<br />
+<br/>
 <p float="left"  align="middle">
 <img width="351" alt="Capture d’écran 2022-10-08 à 4 04 37 PM" src="https://user-images.githubusercontent.com/51541884/194714193-5e258809-635a-4ede-8c5e-f900bd8424dc.png">   
 <img width="351" alt="Capture d’écran 2022-10-08 à 4 05 23 PM" src="https://user-images.githubusercontent.com/51541884/194715933-be594c06-fc56-406e-b395-43d658bc8b8f.png">
@@ -45,7 +45,7 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 
 <h3> Renaming or deleting a Task by swiping the cell : </h3>
 
-<br />
+<br/>
 <p align="center">
   <img width="344" alt="Capture d’écran 2022-10-08 à 4 05 44 PM" src="https://user-images.githubusercontent.com/51541884/194715988-a05c8655-7e9a-4da0-b153-3531c37679b6.png">
 </p>
