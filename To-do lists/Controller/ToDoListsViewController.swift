@@ -21,10 +21,12 @@ class ToDoListsViewController: UITableViewController, SwipeTableViewCellDelegate
     }
     var initialDurationText : String?
     var initialPriorityText : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = selectedCategory?.name
         self.hideKeyboardWhenTappedAround()
+        
         tableView.backgroundColor = UIColor(gradientStyle: .leftToRight, withFrame: tableView.frame, andColors: [FlatWatermelonDark(),UIColor(randomFlatColorOf:.dark)])
         //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask ))
         tableView.register(UINib(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "MissionCell")
@@ -116,9 +118,9 @@ class ToDoListsViewController: UITableViewController, SwipeTableViewCellDelegate
         cell.delegate = self
         let mession = messionToDo[indexPath.row]
         cell.taskName.text = mession.name
-        cell.duration.delegate = self
         cell.duration.text = mession.amountOfTime
-        cell.priority.delegate = self
+        //        cell.duration.delegate = self
+        //        cell.priority.delegate = self
         cell.priority.text = mession.priority
         cell.accessoryType = mession.done ? .checkmark : .none
         //        cell?.backgroundColor = UIColor(randomFlatColorOf:.dark)

@@ -11,18 +11,21 @@ import ChameleonFramework
 class TaskTableViewCell: SwipeTableViewCell {
     
     @IBOutlet weak var taskName: UILabel!
-    @IBOutlet weak var priority: UITextView!
-    @IBOutlet weak var duration: UITextView!
+    @IBOutlet weak var priority: UILabel!
+    @IBOutlet weak var duration: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-
+        
         priority.layer.borderWidth = 0.5
-        priority.layer.cornerRadius = 5
+        priority.layer.cornerRadius = 8.0
+        priority.clipsToBounds = true
         duration.layer.borderWidth = 0.5
-        duration.layer.cornerRadius = 5
+        duration.layer.cornerRadius = 8.0
+        duration.clipsToBounds = true
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,7 +33,11 @@ class TaskTableViewCell: SwipeTableViewCell {
         
         // Configure the view for the selected state
     }
-  
+    
+    
+    public static func nib() -> UINib{
+        return UINib(nibName: "TaskTableViewCell", bundle: nil)
+    }
     
 }
 

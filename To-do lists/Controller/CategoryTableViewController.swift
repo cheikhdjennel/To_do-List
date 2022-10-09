@@ -115,7 +115,8 @@ class CategoryTableViewController: UITableViewController,SwipeTableViewCellDeleg
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "CategoryToTasks", sender: self)
+//        performSegue(withIdentifier: "CategoryToTasks", sender: self)
+        performSegue(withIdentifier: Constants.Segues.toTasksVC, sender: self)
         
     }
     
@@ -144,12 +145,19 @@ class CategoryTableViewController: UITableViewController,SwipeTableViewCellDeleg
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let DestinationVC = segue.destination as! ToDoListsViewController
-        if let index = tableView.indexPathsForSelectedRows?[0] {
-            DestinationVC.selectedCategory = self.categoryArray[index.row]
+//        let DestinationVC = segue.destination as! ToDoListsViewController
+//        if let index = tableView.indexPathsForSelectedRows?[0] {
+//            DestinationVC.selectedCategory = self.categoryArray[index.row]
+//    }
             
+        if segue.identifier == Constants.Segues.toTasksVC , let destinationVC = segue.destination as? TasksViewController {
+            if let index = tableView.indexPathsForSelectedRows?[0] {
+                destinationVC.selectedCategory = self.categoryArray[index.row]
+            }
             
         }
+        
+        
         
     }
     
@@ -157,14 +165,3 @@ class CategoryTableViewController: UITableViewController,SwipeTableViewCellDeleg
 }
 
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}

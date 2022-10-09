@@ -24,6 +24,11 @@
 		92DC1E0A274001E3002D682B /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC1E09274001E3002D682B /* CategoryTableViewController.swift */; };
 		9D1DFBD8C091DDA2C4D3574A /* Pods_To_do_listsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04990507DAEFD8946B3F6FF /* Pods_To_do_listsTests.framework */; };
 		F5339636E10D38CC3F54049B /* Pods_To_do_lists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3733D6F160FBC4F1090B66 /* Pods_To_do_lists.framework */; };
+		FB63F59528F1E2F40008C0B9 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59428F1E2F40008C0B9 /* TasksViewController.swift */; };
+		FB63F59728F1E3C10008C0B9 /* DoneTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59628F1E3C10008C0B9 /* DoneTasksTableViewController.swift */; };
+		FB63F59928F1E3D80008C0B9 /* InProgressTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59828F1E3D80008C0B9 /* InProgressTasksTableViewController.swift */; };
+		FB63F59C28F1FED10008C0B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59B28F1FED10008C0B9 /* Constants.swift */; };
+		FB63F59E28F2037B0008C0B9 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59D28F2037B0008C0B9 /* ViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		C152A22D8716CBA60262CD1D /* Pods-To-do listsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-do listsTests.release.xcconfig"; path = "Target Support Files/Pods-To-do listsTests/Pods-To-do listsTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF52F0DF88FCF95B3664B02F /* Pods-To-do lists-To-do listsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-do lists-To-do listsUITests.debug.xcconfig"; path = "Target Support Files/Pods-To-do lists-To-do listsUITests/Pods-To-do lists-To-do listsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3104925C54DCD08CD5D4F78 /* Pods-To-do lists-To-do listsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-do lists-To-do listsUITests.release.xcconfig"; path = "Target Support Files/Pods-To-do lists-To-do listsUITests/Pods-To-do lists-To-do listsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FB63F59428F1E2F40008C0B9 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		FB63F59628F1E3C10008C0B9 /* DoneTasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTasksTableViewController.swift; sourceTree = "<group>"; };
+		FB63F59828F1E3D80008C0B9 /* InProgressTasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressTasksTableViewController.swift; sourceTree = "<group>"; };
+		FB63F59B28F1FED10008C0B9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FB63F59D28F2037B0008C0B9 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				9210BDC6267ECFC700F22843 /* AppDelegate.swift */,
+				FB63F59A28F1FEBC0008C0B9 /* Helper */,
 				9210BE01267ED98E00F22843 /* Model */,
 				9210BE00267ED98B00F22843 /* View */,
 				9210BDFF267ED98700F22843 /* Controller */,
@@ -175,6 +186,9 @@
 			children = (
 				9210BDCA267ECFC700F22843 /* ToDoListsViewController.swift */,
 				92DC1E09274001E3002D682B /* CategoryTableViewController.swift */,
+				FB63F59428F1E2F40008C0B9 /* TasksViewController.swift */,
+				FB63F59628F1E3C10008C0B9 /* DoneTasksTableViewController.swift */,
+				FB63F59828F1E3D80008C0B9 /* InProgressTasksTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +222,15 @@
 				A04990507DAEFD8946B3F6FF /* Pods_To_do_listsTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB63F59A28F1FEBC0008C0B9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FB63F59B28F1FED10008C0B9 /* Constants.swift */,
+				FB63F59D28F2037B0008C0B9 /* ViewControllerExtension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,9 +474,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				92DC1E0A274001E3002D682B /* CategoryTableViewController.swift in Sources */,
+				FB63F59C28F1FED10008C0B9 /* Constants.swift in Sources */,
+				FB63F59528F1E2F40008C0B9 /* TasksViewController.swift in Sources */,
 				921B7BF4267FF69800D4331F /* TaskTableViewCell.swift in Sources */,
 				9210BDCB267ECFC700F22843 /* ToDoListsViewController.swift in Sources */,
+				FB63F59728F1E3C10008C0B9 /* DoneTasksTableViewController.swift in Sources */,
 				9210BDC7267ECFC700F22843 /* AppDelegate.swift in Sources */,
+				FB63F59928F1E3D80008C0B9 /* InProgressTasksTableViewController.swift in Sources */,
+				FB63F59E28F2037B0008C0B9 /* ViewControllerExtension.swift in Sources */,
 				9224B0DF2683930600F6FDC0 /* CategoryTableViewCell.swift in Sources */,
 				92744314273DAD2800CFC7C3 /* Data.xcdatamodeld in Sources */,
 				9210BDC9267ECFC700F22843 /* SceneDelegate.swift in Sources */,
@@ -562,7 +590,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -617,7 +645,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

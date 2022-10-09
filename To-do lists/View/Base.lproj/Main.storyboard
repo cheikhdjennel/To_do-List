@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCp-Fh-gxL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCp-Fh-gxL">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,7 +60,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryIden" id="k44-Ur-Q08">
-                                <rect key="frame" x="0.0" y="28" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k44-Ur-Q08" id="20g-Df-Vpg">
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
@@ -81,16 +83,67 @@
                     </navigationItem>
                     <connections>
                         <segue destination="zTQ-bu-e1e" kind="show" identifier="CategoryToTasks" id="32i-eD-efU"/>
+                        <segue destination="KqD-ib-pD9" kind="show" identifier="toTasksViewController" id="DXG-bR-sRf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HW4-5a-hIG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2786" y="98"/>
         </scene>
+        <!--Tasks View Controller-->
+        <scene sceneID="s9P-pC-5XO">
+            <objects>
+                <viewController id="KqD-ib-pD9" customClass="TasksViewController" customModule="To_do_lists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="07C-lY-vJK">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-bK-8BT">
+                                <rect key="frame" x="-3" y="144" width="434" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cQt-g2-JLZ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="In Progress"/>
+                                    <segment title="Done"/>
+                                </segments>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" placeholder="Search for task" translatesAutoresizingMaskIntoConstraints="NO" id="s9X-gB-eEM">
+                                <rect key="frame" x="0.0" y="198" width="428" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MYS-lK-gEj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s9X-gB-eEM" firstAttribute="trailing" secondItem="MYS-lK-gEj" secondAttribute="trailing" id="LME-Q0-mdg"/>
+                            <constraint firstItem="e0K-bK-8BT" firstAttribute="top" secondItem="MYS-lK-gEj" secondAttribute="top" constant="4" id="UFF-nS-QdZ"/>
+                            <constraint firstItem="s9X-gB-eEM" firstAttribute="top" secondItem="e0K-bK-8BT" secondAttribute="bottom" constant="4" id="hC9-Dx-hXr"/>
+                            <constraint firstItem="e0K-bK-8BT" firstAttribute="leading" secondItem="MYS-lK-gEj" secondAttribute="leading" constant="-3" id="lW5-Nb-SDo"/>
+                            <constraint firstItem="MYS-lK-gEj" firstAttribute="trailing" secondItem="e0K-bK-8BT" secondAttribute="trailing" constant="-3" id="lvY-NH-56J"/>
+                            <constraint firstItem="s9X-gB-eEM" firstAttribute="leading" secondItem="MYS-lK-gEj" secondAttribute="leading" id="vuu-VH-Nvg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="n75-XY-V0T">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="wJc-d6-uBk">
+                            <connections>
+                                <action selector="AddTaskButtonTapped:" destination="KqD-ib-pD9" id="Ybg-nz-sq6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="s9X-gB-eEM" id="N82-jZ-W0B"/>
+                        <outlet property="segmentedControl" destination="e0K-bK-8BT" id="LnP-hc-3yx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIB-td-TaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786" y="1090"/>
+        </scene>
         <!--Item-->
         <scene sceneID="qEx-zs-M57">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CCp-Fh-gxL" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="CCp-Fh-gxL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="S1v-o1-ohv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="OOv-QH-kue">
@@ -102,7 +155,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gY7-GT-cds">
-                        <rect key="frame" x="0.0" y="843" width="428" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

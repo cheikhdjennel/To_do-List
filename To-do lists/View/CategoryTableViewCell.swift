@@ -23,5 +23,8 @@ class CategoryTableViewCell: SwipeTableViewCell {
 
         // Configure the view for the selected state
     }
-    
+ 
+    public static func nib() -> UINib{
+        return UINib(nibName: "CategoryTableViewCell", bundle: nil)
+    }
 }
