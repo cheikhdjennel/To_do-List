@@ -24,6 +24,7 @@
 		92DC1E0A274001E3002D682B /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC1E09274001E3002D682B /* CategoryTableViewController.swift */; };
 		9D1DFBD8C091DDA2C4D3574A /* Pods_To_do_listsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04990507DAEFD8946B3F6FF /* Pods_To_do_listsTests.framework */; };
 		F5339636E10D38CC3F54049B /* Pods_To_do_lists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3733D6F160FBC4F1090B66 /* Pods_To_do_lists.framework */; };
+		FB35E0D828F4232F007C8FBC /* CustomToolbarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35E0D728F4232F007C8FBC /* CustomToolbarItemView.swift */; };
 		FB63F59528F1E2F40008C0B9 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59428F1E2F40008C0B9 /* TasksViewController.swift */; };
 		FB63F59728F1E3C10008C0B9 /* DoneTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59628F1E3C10008C0B9 /* DoneTasksTableViewController.swift */; };
 		FB63F59928F1E3D80008C0B9 /* InProgressTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63F59828F1E3D80008C0B9 /* InProgressTasksTableViewController.swift */; };
@@ -78,6 +79,7 @@
 		C152A22D8716CBA60262CD1D /* Pods-To-do listsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-do listsTests.release.xcconfig"; path = "Target Support Files/Pods-To-do listsTests/Pods-To-do listsTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF52F0DF88FCF95B3664B02F /* Pods-To-do lists-To-do listsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-do lists-To-do listsUITests.debug.xcconfig"; path = "Target Support Files/Pods-To-do lists-To-do listsUITests/Pods-To-do lists-To-do listsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3104925C54DCD08CD5D4F78 /* Pods-To-do lists-To-do listsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-do lists-To-do listsUITests.release.xcconfig"; path = "Target Support Files/Pods-To-do lists-To-do listsUITests/Pods-To-do lists-To-do listsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FB35E0D728F4232F007C8FBC /* CustomToolbarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbarItemView.swift; sourceTree = "<group>"; };
 		FB63F59428F1E2F40008C0B9 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		FB63F59628F1E3C10008C0B9 /* DoneTasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTasksTableViewController.swift; sourceTree = "<group>"; };
 		FB63F59828F1E3D80008C0B9 /* InProgressTasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressTasksTableViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				921B7BF2267FF69800D4331F /* TaskTableViewCell.swift */,
 				9224B0DC2683930600F6FDC0 /* CategoryTableViewCell.xib */,
 				9224B0DD2683930600F6FDC0 /* CategoryTableViewCell.swift */,
+				FB35E0D728F4232F007C8FBC /* CustomToolbarItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				9210BDC7267ECFC700F22843 /* AppDelegate.swift in Sources */,
 				FB63F59928F1E3D80008C0B9 /* InProgressTasksTableViewController.swift in Sources */,
 				FB63F59E28F2037B0008C0B9 /* ViewControllerExtension.swift in Sources */,
+				FB35E0D828F4232F007C8FBC /* CustomToolbarItemView.swift in Sources */,
 				9224B0DF2683930600F6FDC0 /* CategoryTableViewCell.swift in Sources */,
 				92744314273DAD2800CFC7C3 /* Data.xcdatamodeld in Sources */,
 				9210BDC9267ECFC700F22843 /* SceneDelegate.swift in Sources */,

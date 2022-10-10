@@ -83,49 +83,88 @@ class TasksViewController: UIViewController , TaskListUpdated {
             tasksContainerView.bottomAnchor.constraint(equalTo: toolBarView.topAnchor)
         ])
     }
-
     
-    let toolBarView : UIView = {
-        let v = UIView()
+    let toolBarView : UIStackView = {
+        let v = UIStackView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.isUserInteractionEnabled = true
-
-       return v
+        v.axis = .horizontal
+        v.distribution = .fillEqually
+        v.alignment = .top
+        v.spacing = 16.0
+        return v
     }()
     
-    let doneButton : UIButton  = {
-        let doneButton = UIButton()
-        doneButton.translatesAutoresizingMaskIntoConstraints = false
-        doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
-        let img = UIImage(systemName: "checkmark.circle.fill")
-        let img2 = UIImage(named: "icons8-tâche-terminée-50")
-        doneButton.setBackgroundImage(img2, for: .normal)
-        doneButton.tintColor = .white
-        doneButton.isUserInteractionEnabled = true
-        return doneButton
+    let sortItemView : CustomToolbarItemView = {
+        let v = CustomToolbarItemView(imgName: "icons8-tri-croissant-50", title: "Sort")
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.itemButton.addTarget(self, action: #selector(sortByPriorityButtonTapped), for: .touchUpInside)
+        return v
     }()
+    
+    let markAsDoneItemView : CustomToolbarItemView = {
+        let v = CustomToolbarItemView(imgName: "icons8-tâche-terminée-50", title: "Mark as Done")
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.itemButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
+
+        return v
+    }()
+    
+    let clearItemView : CustomToolbarItemView = {
+        let v = CustomToolbarItemView(imgName: "icons8-poubelle-vide-50", title: "Clear All")
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.itemButton.addTarget(self, action: #selector(clearAllButtonTapped), for: .touchUpInside)
+
+        return v
+    }()
+    
     
     func setupToolbar(){
+        self.view.addSubview(toolBarView)
         let themeColor = UIColor(gradientStyle: .leftToRight, withFrame: view.frame, andColors: [FlatWatermelonDark(),UIColor(randomFlatColorOf:.dark)])
         toolBarView.backgroundColor = themeColor
-        view.addSubview(toolBarView)
-        toolBarView.addSubview(doneButton)
+        toolBarView.addArrangedSubview(sortItemView)
+        toolBarView.addArrangedSubview(markAsDoneItemView)
+        toolBarView.addArrangedSubview(clearItemView)
         layoutToolbarView()
     }
     
-    func layoutToolbarView(){
-        NSLayoutConstraint.activate([
-            toolBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            toolBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            toolBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            toolBarView.heightAnchor.constraint(equalToConstant: 90),
-            
-            doneButton.widthAnchor.constraint(equalToConstant: 45),
-            doneButton.heightAnchor.constraint(equalToConstant: 45),
-            doneButton.centerXAnchor.constraint(equalTo: toolBarView.centerXAnchor),
-            doneButton.topAnchor.constraint(equalTo: toolBarView.topAnchor, constant: 15),
-        ])
-    }
+        func layoutToolbarView(){
+            NSLayoutConstraint.activate([
+                toolBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                toolBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                toolBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                toolBarView.heightAnchor.constraint(equalToConstant: 90),
+            ])
+        }
+    
+//    let toolBarView : UIView = {
+//        let v = UIView()
+//        v.translatesAutoresizingMaskIntoConstraints = false
+//        v.isUserInteractionEnabled = true
+//
+//       return v
+//    }()
+//
+//    let doneButton : UIButton  = {
+//        let doneButton = UIButton()
+//        doneButton.translatesAutoresizingMaskIntoConstraints = false
+//        doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
+//        let img = UIImage(systemName: "checkmark.circle.fill")
+//        let img2 = UIImage(named: "icons8-tâche-terminée-50")
+//        doneButton.setBackgroundImage(img2, for: .normal)
+//        doneButton.tintColor = .white
+//        doneButton.isUserInteractionEnabled = true
+//        return doneButton
+//    }()
+//
+//    func setupToolbar(){
+
+//        view.addSubview(toolBarView)
+//        toolBarView.addSubview(doneButton)
+//        layoutToolbarView()
+//    }
+//
+
     
     let activityIndicator : UIActivityIndicatorView = {
         let a = UIActivityIndicatorView()
@@ -153,10 +192,9 @@ class TasksViewController: UIViewController , TaskListUpdated {
         view.backgroundColor = themeColor
         doneTasksTC.delegate = self
         hideKeyboardWhenTappedAround()
-        setupToolbar()
         configSegmentedControl()
-        setupTasksContainerView()
         setupToolbar()
+        setupTasksContainerView()
         addChildVC(childViewController: inProgressTasksTC, toView: tasksContainerView)
         setupActivityIndicatorView()
     }
@@ -170,6 +208,7 @@ class TasksViewController: UIViewController , TaskListUpdated {
                 self.removeChildVC(childViewController: doneTasksTC)
             }
             self.addChildVC(childViewController: inProgressTasksTC, toView: tasksContainerView)
+            self.markAsDoneItemView.itemTitleLabel.text = "Mark as Done"
             UIView.animate(withDuration: 0.3) {
                 self.underlineViewLeadingConstraint?.constant = 0.0
                 self.view.layoutIfNeeded()
@@ -181,6 +220,7 @@ class TasksViewController: UIViewController , TaskListUpdated {
                 self.removeChildVC(childViewController: inProgressTasksTC)
             }
             self.addChildVC(childViewController: doneTasksTC, toView: tasksContainerView)
+            self.markAsDoneItemView.itemTitleLabel.text = "Undone"
             UIView.animate(withDuration: 0.3) {
                 self.underlineViewLeadingConstraint?.constant = self.leadingConstantWhenDoneSegmentSelected
                 self.view.layoutIfNeeded()
@@ -235,18 +275,17 @@ class TasksViewController: UIViewController , TaskListUpdated {
         
     }
     
-    //TODO: - Add a task
+    //TODO: - Done Button Action
     @objc func doneButtonTapped() {
         print("\ndoneButtonTapped\n")
-        if inProgressTasksTC.tableView.indexPathsForSelectedRows != nil  {
+        if inProgressTasksTC.tableView.indexPathsForSelectedRows != nil && segmentedControl.selectedSegmentIndex == 0 {
             print("\nSome Tasks Cells are selected\n")
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             inProgressTasksTC.updateTaskStatut()
             doneTasksTC.updateTaskStatut()
-
             
-        }else if doneTasksTC.tableView.indexPathsForSelectedRows != nil {
+        }else if doneTasksTC.tableView.indexPathsForSelectedRows != nil && segmentedControl.selectedSegmentIndex == 1 {
             print("\nSome Tasks Cells are selected\n")
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
@@ -254,9 +293,24 @@ class TasksViewController: UIViewController , TaskListUpdated {
             inProgressTasksTC.updateTaskStatut()
             
         }
-        
-        
-        
+
+    }
+    //TODO: - Clear All Button Action
+    @objc func clearAllButtonTapped() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            inProgressTasksTC.clearAll()
+        }else{
+            doneTasksTC.clearAll()
+        }
+    }
+    
+    //TODO: - Sort by priority Button Action
+    @objc func sortByPriorityButtonTapped() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            inProgressTasksTC.loadInProgressTasks(sortBy: "priority")
+        }else{
+            doneTasksTC.loadDoneTasks(sortBy: "priority")
+        }
     }
     
     func updated() {

@@ -28,7 +28,7 @@ class InProgressTasksTableViewController: UITableViewController, SwipeTableViewC
         
     }
     
-    // MARK: - Add, load and save tasks functions
+    // MARK: - Add, load, save and clear all tasks functions
     
     func addTask(task : Task){
         self.inProgressTasks.append(task)
@@ -53,10 +53,10 @@ class InProgressTasksTableViewController: UITableViewController, SwipeTableViewC
         self.tableView.reloadData()
     }
     
-    func loadInProgressTasks() {
+    func loadInProgressTasks(sortBy property : String = "name") {
         let request : NSFetchRequest<Task> = Task.fetchRequest()
             let predicate = NSPredicate(format: "done == false")
-            request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            request.sortDescriptors = [NSSortDescriptor(key: property, ascending: true)]
             loadTasks(with: request,predicate: predicate)
         
     }
@@ -80,7 +80,14 @@ class InProgressTasksTableViewController: UITableViewController, SwipeTableViewC
         self.tableView.reloadData()
     }
     
-
+    func clearAll(){
+        for task in inProgressTasks{
+            self.context.delete(task)
+        }
+        inProgressTasks.removeAll()
+        self.saveTask()
+    }
+    
     
     // MARK: - Table view data source
     

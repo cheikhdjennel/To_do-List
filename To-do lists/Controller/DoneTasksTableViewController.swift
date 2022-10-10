@@ -52,11 +52,11 @@ class DoneTasksTableViewController: UITableViewController, SwipeTableViewCellDel
         }
     }
 
-    func loadDoneTasks() {
+    func loadDoneTasks(sortBy property : String = "name") {
         let request : NSFetchRequest<Task> = Task.fetchRequest()
 //        let predicate = NSPredicate(format: "parentCategory.name MATCHES %@ AND done == %@",selectedCategory!.name!, true)
             let predicate = NSPredicate(format: "done == true")
-            request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            request.sortDescriptors = [NSSortDescriptor(key: property, ascending: true)]
             loadTasks(with: request,predicate: predicate)
     }
 
@@ -80,6 +80,14 @@ class DoneTasksTableViewController: UITableViewController, SwipeTableViewCellDel
         
     }
     
+    func clearAll(){
+        for task in doneTasks{
+            self.context.delete(task)
+        }
+        doneTasks.removeAll()
+        self.saveTask()
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -100,29 +108,23 @@ class DoneTasksTableViewController: UITableViewController, SwipeTableViewCellDel
         let mession = doneTasks[indexPath.row]
         cell.taskName.text = mession.name
         cell.duration.text = mession.amountOfTime
-        //        cell.duration.delegate = self
-        //        cell.priority.delegate = self
         cell.priority.text = mession.priority
         cell.accessoryType = mession.done ? .checkmark : .none
-        //        cell?.backgroundColor = UIColor(randomFlatColorOf:.dark)
         cell.backgroundColor = UIColor(gradientStyle: .leftToRight, withFrame: cell.frame, andColors: [UIColor(randomFlatColorOf:.dark),UIColor(randomFlatColorOf:.dark)])
         cell.taskName.textColor = ContrastColorOf(cell.backgroundColor!, returnFlat: true)
         return cell
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
-        guard orientation == .right else { return nil }
         
+        guard orientation == .right else { return nil }
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            
             self.context.delete(self.doneTasks[indexPath.row])
             self.doneTasks.remove(at: indexPath.row)
             self.saveTask()
             
         }
-        
         deleteAction.image = UIImage(systemName: "trash.fill")
-        
         let renameAction = SwipeAction(style: .default, title: "Rename") { action, indexPath in
             var taskName : String?
             let alert = UIAlertController(title: "RENAME TASK", message: nil, preferredStyle: .alert)
