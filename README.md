@@ -45,8 +45,6 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 
 <h2>2)-Adding a task to a category: </h2>
 
-<br/>
-
 <p>The task will be added to InProgress tasks list</p>
 
 <p float="left"  align="middle" >
@@ -56,9 +54,7 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 
 <h2>2)-Mark one or multiple tasks as done : </h2>
 
-<br/>
-
-<p>The marked tasks will be added to the done tasks list and deleted from in progress list</p>
+<p>The marked tasks will be added to the done tasks list and deleted from the inprogress list</p>
   
 <p float="left"  align="middle" >
 <img width="345" hspace="40" alt="select done tasks" src="https://user-images.githubusercontent.com/51541884/194936169-dcfe7a5b-4b8c-4c5f-ab92-43063e73c7c1.png">
@@ -67,37 +63,32 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 </p>
     
 
-<h3> Clear the in progress or done tasks list - the tasks will be deleted from the DB : </h3>
-
+<h2> Clear the in progress or done tasks list - the tasks will be deleted from the DB : </h2>
 <br/>
 <p align="center">
 <img width="346" alt="After clear All" src="https://user-images.githubusercontent.com/51541884/194936979-07003542-0d12-4005-bdb0-faa778341f8a.png">
-
 </p>  
   
   
+<h2> Sort Tasks by priority : </h2>
+<br/>
+<p align="center">
+  <img width="345" alt="sort by priority" src="https://user-images.githubusercontent.com/51541884/194937089-41d4fbdd-65aa-483d-b6fd-f62cac402633.png">
+</p>
+  
+  
+  
 <h3> Renaming or deleting a Task by swiping the cell : </h3>
-
 <br/>
 <p align="center">
   <img width="348" alt="swipe cell" src="https://user-images.githubusercontent.com/51541884/194934477-8e2c34ff-3186-471a-ab46-2c4f49289205.png">
-  
 </p>
 
-<h3> Sort Tasks by priority : </h3>
 
-<br/>
-<p align="center">
-
-  <img width="345" alt="sort by priority" src="https://user-images.githubusercontent.com/51541884/194937089-41d4fbdd-65aa-483d-b6fd-f62cac402633.png">
-
-</p>
 
 
 
 <h2>3)-Searching for a task : </h2>
-
-
 <p align="center">
   <img width="344" alt="Capture d’écran 2022-10-08 à 4 48 09 PM" src="https://user-images.githubusercontent.com/51541884/194716023-b086386d-70af-458d-9ec3-d61d8f007a7c.png">
 </p>
