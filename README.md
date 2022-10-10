@@ -53,8 +53,7 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 
 
 <p float="left"  align="middle" >
-<img width="346" alt="Capture d’écran 2022-10-10 à 7 44 28 PM" src="https://user-images.githubusercontent.com/51541884/194934220-689c3bdc-4725-4d36-b8ad-86fac5b1bbd4.png">
-The task will be added to the in progress tasks list.
+<img width="346" hspace="15" alt="Capture d’écran 2022-10-10 à 7 44 28 PM" src="https://user-images.githubusercontent.com/51541884/194934220-689c3bdc-4725-4d36-b8ad-86fac5b1bbd4.png"> <b>The task will be added to the in progress tasks list.</b>
 <img width="347" alt="Capture d’écran 2022-10-10 à 4 25 14 PM" src="https://user-images.githubusercontent.com/51541884/194934323-c921406a-1398-4485-bfa6-49555cd3d60c.png">
 
 </p>
