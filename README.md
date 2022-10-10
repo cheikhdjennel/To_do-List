@@ -31,32 +31,20 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 
 <p>
 <img width="347" hspace="10" alt="Capture d’écran 2022-10-08 à 3 56 47 PM" src="https://user-images.githubusercontent.com/51541884/194713796-9fa85f8f-9b36-4294-bf4c-13344ef7bb24.png">     
-<img width="352" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png"> <img width="270" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
-
-</p>
-
-<h3> Renaming or deleting a category by swiping the cell : </h3>
-<br/>
-
-<p align="center">
-  <img width="350" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
-</p>
+<img width="352" hspace="10" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png"> <img width="270" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
 
 
 
 <h2>2)-Adding a task to a category: </h2>
-
 <p>The task will be added to InProgress tasks list</p>
-
 <p float="left"  align="middle" >
 <img width="346" hspace="40" alt="Capture d’écran 2022-10-10 à 7 44 28 PM" src="https://user-images.githubusercontent.com/51541884/194934220-689c3bdc-4725-4d36-b8ad-86fac5b1bbd4.png"> 
 <img width="347" alt="Capture d’écran 2022-10-10 à 4 25 14 PM" src="https://user-images.githubusercontent.com/51541884/194934323-c921406a-1398-4485-bfa6-49555cd3d60c.png">
 </p>
 
-<h2>2)-Mark one or multiple tasks as done : </h2>
-
-<p>The marked tasks will be added to the done tasks list and deleted from the inprogress list</p>
   
+<h2>2)-Mark one or multiple tasks as done : </h2>
+<p>The marked tasks will be added to the done tasks list and deleted from the inprogress list</p>
 <p float="left"  align="middle" >
 <img width="345" hspace="40" alt="select done tasks" src="https://user-images.githubusercontent.com/51541884/194936169-dcfe7a5b-4b8c-4c5f-ab92-43063e73c7c1.png">
 <img width="347" alt="Updated done tasks list" src="https://user-images.githubusercontent.com/51541884/194936264-3a2ac301-e697-4aab-99e0-4b1393586329.png">
