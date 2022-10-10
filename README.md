@@ -63,14 +63,14 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 </p>
     
 
-<h2> Clear the in progress or done tasks list - the tasks will be deleted from the DB : </h2>
+<h2>3)-Clear the in progress or done tasks list - the tasks will be deleted from the DB : </h2>
 <br/>
 <p align="center">
 <img width="346" alt="After clear All" src="https://user-images.githubusercontent.com/51541884/194936979-07003542-0d12-4005-bdb0-faa778341f8a.png">
 </p>  
   
   
-<h2> Sort Tasks by priority : </h2>
+<h2>4)-Sort Tasks by priority : </h2>
 <br/>
 <p align="center">
   <img width="345" alt="sort by priority" src="https://user-images.githubusercontent.com/51541884/194937089-41d4fbdd-65aa-483d-b6fd-f62cac402633.png">
@@ -78,7 +78,7 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
   
   
   
-<h3> Renaming or deleting a Task by swiping the cell : </h3>
+<h2>5)-Renaming or deleting a Task by swiping the cell : </h2>
 <br/>
 <p align="center">
   <img width="348" alt="swipe cell" src="https://user-images.githubusercontent.com/51541884/194934477-8e2c34ff-3186-471a-ab46-2c4f49289205.png">
@@ -88,7 +88,7 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 
 
 
-<h2>3)-Searching for a task : </h2>
+<h2>6)-Searching for a task : </h2>
 <p align="center">
   <img width="344" alt="Capture d’écran 2022-10-08 à 4 48 09 PM" src="https://user-images.githubusercontent.com/51541884/194716023-b086386d-70af-458d-9ec3-d61d8f007a7c.png">
 </p>
