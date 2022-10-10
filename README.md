@@ -25,13 +25,15 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 
 <h2>1)-Adding a task's category : </h2>
 <p>By setting a name for the new category, the category added then gonna be stored in SQlite database using Coredata </p>
-
+<p>Renaming or deleting a category by swiping the cell</p>
 
 <br/>
 
 <p align="middle" >
 <img width="347" hspace="30" alt="Capture d’écran 2022-10-08 à 3 56 47 PM" src="https://user-images.githubusercontent.com/51541884/194713796-9fa85f8f-9b36-4294-bf4c-13344ef7bb24.png">     
 <img width="352" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png">
+<img width="350" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
+
 </p>
 
 <h3> Renaming or deleting a category by swiping the cell : </h3>
