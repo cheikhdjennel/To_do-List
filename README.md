@@ -1,13 +1,18 @@
 # To_do-List
-A todo list iOS app developed with swift5 and coredata to persist data, this app help people organise their tasks on categories.
-The app is simple, intuitive, and easy to use and update tasks informations.
-Design pattern used : MVC and not MVVM since the app is not complicated.
+<p>The repo present A daily Todo-List iOS app developed using swift5 and coredata to persist data.</p></br>
+<p>The app help people organise their tasks on categories where each category is composed of a list of in progress tasks and done tasks.</p></br>
+<p>The app is simple, intuitive and easy to use.</p></br>
+Design pattern used : MVC and not MVVM since the app is not so complicated.
 
 <h1> App functionalities : </h1>
 <ul>
 <li> Add a category.
 <li> Rename or delete a category.
 <li> Add a task inside a category with specifying the name, duration and the task priority.
+<li> Select one task or multiple and mark them as done, they will be added to done list tasks.
+<li> Check done tasks with having the ability to mark them as undone again.
+<li> Sort tasks by priority.
+<li> clear all the list of the in progress tasks or done tasks. 
 <li> Rename or delete of a task.
 <li> Search for a task by typing a string that is contained in the task name.
 </ul>
@@ -46,11 +51,21 @@ Design pattern used : MVC and not MVVM since the app is not complicated.
 <img width="351" alt="Capture d’écran 2022-10-08 à 4 05 23 PM" src="https://user-images.githubusercontent.com/51541884/194715933-be594c06-fc56-406e-b395-43d658bc8b8f.png">
 </p>
 
+
+<p float="left"  align="middle" >
+<img width="346" alt="Capture d’écran 2022-10-10 à 7 44 28 PM" src="https://user-images.githubusercontent.com/51541884/194934220-689c3bdc-4725-4d36-b8ad-86fac5b1bbd4.png">
+The task will be added to the in progress tasks list.
+<img width="347" alt="Capture d’écran 2022-10-10 à 4 25 14 PM" src="https://user-images.githubusercontent.com/51541884/194934323-c921406a-1398-4485-bfa6-49555cd3d60c.png">
+
+</p>
+
+
 <h3> Renaming or deleting a Task by swiping the cell : </h3>
 
 <br/>
 <p align="center">
-  <img width="344" alt="Capture d’écran 2022-10-08 à 4 05 44 PM" src="https://user-images.githubusercontent.com/51541884/194715988-a05c8655-7e9a-4da0-b153-3531c37679b6.png">
+  <img width="348" alt="swipe cell" src="https://user-images.githubusercontent.com/51541884/194934477-8e2c34ff-3186-471a-ab46-2c4f49289205.png">
+  
 </p>
 
 
