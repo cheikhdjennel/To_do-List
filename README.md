@@ -1,6 +1,7 @@
 # To_do-List
 <p><b>-The repo present A daily Todo-List iOS app developed using swift5 and coredata to persist data.</b></p>
-<p>-The app help people organise their tasks on categories where each category is composed of a list of in progress tasks and done tasks. The app is simple, intuitive and easy to use. </br>
+<p>-The app help people organise their tasks on categories where each category is composed of a list of in progress tasks and done tasks.</br> 
+-The app is simple, intuitive and easy to use. </br>
 -Design pattern used : MVC and not MVVM since the app is not so complicated.
 </p>
 <h1> App functionalities : </h1>
