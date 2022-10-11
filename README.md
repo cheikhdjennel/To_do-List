@@ -1,9 +1,8 @@
 # To_do-List
-<p><b>The repo present A daily Todo-List iOS app developed using swift5 and coredata to persist data.</b></p>
-<p>The app help people organise their tasks on categories where each category is composed of a list of in progress tasks and done tasks.</p>
-<p>The app is simple, intuitive and easy to use.</p>
-Design pattern used : MVC and not MVVM since the app is not so complicated.
-
+<p><b>-The repo present A daily Todo-List iOS app developed using swift5 and coredata to persist data.</b></p>
+<p>-The app help people organise their tasks on categories where each category is composed of a list of in progress tasks and done tasks. The app is simple, intuitive and easy to use. </br>
+-Design pattern used : MVC and not MVVM since the app is not so complicated.
+</p>
 <h1> App functionalities : </h1>
 <ul>
 <li> Add a category.
@@ -27,8 +26,9 @@ Design pattern used : MVC and not MVVM since the app is not so complicated.
 <p>-By setting a name for the new category, the category added then gonna be stored in SQlite database using Coredata.</p>
 <p>-Renaming or deleting a category by swiping the cell.</p>
 <p>
-<img width="320" hspace="10" alt="Capture d’écran 2022-10-08 à 3 56 47 PM" src="https://user-images.githubusercontent.com/51541884/194713796-9fa85f8f-9b36-4294-bf4c-13344ef7bb24.png">     
-<img width="320" hspace="10" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png"> <img width="270" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
+<img width="300" hspace="10" alt="Capture d’écran 2022-10-08 à 3 56 47 PM" src="https://user-images.githubusercontent.com/51541884/194713796-9fa85f8f-9b36-4294-bf4c-13344ef7bb24.png">     
+<img width="300" hspace="10" alt="Capture d’écran 2022-10-08 à 3 57 39 PM" src="https://user-images.githubusercontent.com/51541884/194713872-32390978-c36f-4381-9da9-f0960c313e1b.png"> 
+<img width="260" alt="Capture d’écran 2022-10-08 à 3 58 24 PM" src="https://user-images.githubusercontent.com/51541884/194713911-a744dec8-6739-49c0-a52a-603f452cdd0a.png">
 
 
 
